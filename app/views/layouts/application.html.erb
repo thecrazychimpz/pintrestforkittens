@@ -28,12 +28,12 @@ data-toggle="collapse" data-target=".navbar-ex1-collapse">
 <li><a href="/">Home</a></li>
 <li><a href="/about">About</a></li>
 <li><a href="/homework">Homework</a><li>
-	 <% if user_signed_in? %>
-        <li><%= link_to "Sign out", destroy_user_session_path %></li>
+	<% if user_signed_in? %>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li>
-      <% end %>
+      <% end %> 
 </ul>
 </div><!-- /.navbar-collapse -->
 </nav>
