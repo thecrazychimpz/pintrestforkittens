@@ -2,7 +2,7 @@
 <% if !user_signed_in? %>
 <div class="jumbotron">
   <h1>Welcome to Pintrest for Kittens!</h1>
-  <p>Don't have an account? Well aren't you lucky, because this is just the place to get one! If you already have one, just sign in.</p>
+  <p>Don't have an account? Well aren't you lucky, because this is just the place to get one! If you already have one just sign in.</p>
   <p><a class="btn btn-success btn-lg" role="button" href="/users/sign_in">Sign In</a> <a class="btn btn-warning btn-lg" role="button" href="/users/sign_up">Sign Up</a></p>
 </div>
 <% else %>
@@ -30,3 +30,4 @@
 <% end %>
 <br>
 
+<%= link_to 'New Pin', new_pin_path %>
