@@ -2,7 +2,9 @@
 <h1>We all love kittens</h1>
 <p>But I <i>just don't know</i> where to find them on the
 <b>internet</b>.</p>
-<p>
+<% if user_signed_in? %>
+<p>Welcome back</p><p><%= current_user.email %></p>
+<% end %>
 <a class="btn btn-primary btn-lg" role="button"
 href="/about">Learn more</a>
 <a class="btn btn-warning btn-lg" role="button"
@@ -12,25 +14,4 @@ puppies</a>
 href="http://butlertwp.org/Images/Road.jpg"><span class="glyphicon glyphicon-road"></span></a>
 </p>
 </div>
-<div>
 
-<h1>We also like movies!</h1>
-	<table class="table">
-  <tr>
-    <th>Movie</th>
-    <th>Director</th>
-  </tr>
-  <tr>
-    <td>Howl's Moving Castle</td>
-    <td>Hayao Miyazaki</td>
-  </tr>
-  <tr>
-  	<td>Bowfinger</td>
-  	<td>Frank Oz</td>
-  </tr>
-  <tr>
-  	<td>Rebel Without a Cause</td>
-  	<td>Nicholas Ray</td>
-  </tr>
-</table>
-</div>
