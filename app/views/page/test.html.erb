@@ -1,10 +1,22 @@
 <div class="jumbotron">
   <h1>Hello Bates College!</h1>
   <p>Buying and selling textbooks is a hassle. We're here to make it easier! The Textbook Trading Post cuts out the middle man (the bookstore and online textbook buyers), and puts the buying and selling power directly into the hands of  students. Here's how it works. If you're looking to sell your textbook, simply list it by following the instructions found in the "Sell" page and it will show up the list below. If you're looking to buy a textbook, simply browse from the list found below. Once you see the textbook you want, just click the "buy" button and you will be provided with the sellers Bates email address. From there you can arrange a time and place to meet. It's that easy! </p>
-  <p><a class="btn btn-warning btn-lg" role="button">Log In</a>
+  <p><a class="btn btn-success btn-lg" role="button">Log In</a>
   <a class="btn btn-success btn-lg" role="button">Sign Up</a></p>
-</div>
+</div><% if user_signed_in? %>
+<p>Welcome back</p><p><%= current_user.email %></p>
+<% end %>
 
 <style>
+.jumbotron{
+    background-color:#4C0009;
+    color: white;
+    font-family: Helvetica;
+}
+.btn-success{
+	background-color: black;
+	border-color: black;
+	color: white;
+}
 
 </style>
