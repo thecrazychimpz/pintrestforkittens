@@ -11,12 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :descriptions %><br>
-    <%= f.text_field :descriptions %>
+   <div class="form-group <%= descriptions_error %>">  
+    <%= f.label :descriptions, class: "control-label col-sm-2" %>
+    <div class="col-sm-10">
+      <%= f.text_field :descriptions, class: "form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions col-sm-offset-2">
+    <%= f.submit class: "btn btn-warning" %>
   </div>
 <% end %>
-
