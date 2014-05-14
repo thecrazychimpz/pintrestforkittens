@@ -29,6 +29,7 @@ data-toggle="collapse" data-target=".navbar-ex1-collapse">
 <li><%= link_to 'About', "/about" %></li>
 <li><%= link_to 'Homework', "/homework" %></li>
 <li><%= link_to 'Pins', "/pins" %></li>
+<li><%= link_to 'Test', "/test" %></li>
 	<% if user_signed_in? %>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
       <% else %>
@@ -46,4 +47,10 @@ data-toggle="collapse" data-target=".navbar-ex1-collapse">
 <%= yield %>
 </div>
 </body>
+<style>
+.navbar-inverse{
+    background-color: black;
+    border-color: black;
+}
+</style>
 </html>

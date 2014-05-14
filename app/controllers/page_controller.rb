@@ -5,4 +5,6 @@ def about
 end
 def homework
 end
+def test
+end
 end
